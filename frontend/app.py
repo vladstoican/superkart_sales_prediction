@@ -1,10 +1,10 @@
-
+import os
 import streamlit as st
 import pandas as pd
 import requests
 
 # Base URL of the Flask backend
-BACKEND_URL = "https://super-engine-gr6vww6p6ggcv555-7860.app.github.dev/"
+BACKEND_URL = os.environ.get("BACKEND_URL", "http://localhost:7860").rstrip("/")
 
 # Page title
 st.title("SuperKart System")
